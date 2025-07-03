@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the absolute path of the script's directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Clear screen
 clear
 
@@ -26,27 +29,27 @@ read -p $'\033[1;33mChoose your option (1-6): \033[0m' option
 # Handle choices
 case $option in
     1)
-        python3 modules/detect_hash.py
+        python3 "$SCRIPT_DIR/modules/detect_hash.py"
         ;;
     2)
-        python3 modules/encode_password.py
+        python3 "$SCRIPT_DIR/modules/encode_password.py"
         ;;
     3)
-        bash modules/decode_hash.sh
+        bash "$SCRIPT_DIR/modules/decode_hash.sh"
         ;;
     4)
-        python3 modules/password_strength.py
+        python3 "$SCRIPT_DIR/modules/password_strength.py"
         ;;
     5)
-        bash modules/brute_force.sh
+        bash "$SCRIPT_DIR/modules/brute_force.sh"
         ;;
     6)
         echo -e "\033[1;31mExiting Kirahash... Stay secure!\033[0m"
         exit 0
         ;;
     *)
-        echo -e "\033[1;31mInvalid option. Please select from 1-5.\033[0m"
+        echo -e "\033[1;31mInvalid option. Please select from 1-6.\033[0m"
         sleep 2
-        bash index.sh
+        bash "$SCRIPT_DIR/index.sh"
         ;;
 esac
