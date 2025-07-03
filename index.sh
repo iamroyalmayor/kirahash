@@ -5,13 +5,16 @@ SCRIPT_PATH="$(readlink -f "$0")"
 SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 
 
+
+
+
 # Clear screen
 clear
 
 # Load the logo
 toilet -f pagga -F border "KIRAHASH" | lolcat
 echo -e "\033[1;36mWelcome to Kirahash - Password & Hashing Toolkit\033[0m"
-echo -e "\033[0;33mCreated by iamroyalmayor | Powered by Spectrum Solutions\033[0m"
+echo -e "\033[0;33mCreated by iamroyalmayor | Powered by Quant Technology LTD\033[0m"
 echo ""
 
 # Menu banner
