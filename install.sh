@@ -25,8 +25,8 @@ fi
 
 # Install Python libraries (standard ones used already)
 echo "📦 Ensuring Python libraries are available..."
-pip3 install --upgrade pip
-pip3 install pycryptodome cryptography
+ pip3 install --upgrade pip
+ pip3 install pycryptodome cryptography
 
 # Make the tool accessible from anywhere
 if [ ! -f /usr/local/bin/kirahash ]; then

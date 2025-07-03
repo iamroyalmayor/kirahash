@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Get the absolute path of the script's directory
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Get the absolute path of the script
+SCRIPT_PATH="$(readlink -f "$0")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+
 
 # Clear screen
 clear
