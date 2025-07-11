@@ -31,13 +31,13 @@ read -p $'\e[1;34mSelect an option: \e[0m' choice
 
 case $choice in
     1)
-        bash bruteforce/dictionary.sh
+        bash "$SCRIPT_DIR/bruteforce/dictionary.sh"
         ;;
     2)
-        bash bruteforce/pure.sh
+        bash "$SCRIPT_DIR/bruteforce/pure.sh"
         ;;
     3)
-        bash bruteforce/hybrid.sh
+        bash "$SCRIPT_DIR/bruteforce/hybrid.sh"
         ;;
     0)
         kirahash
